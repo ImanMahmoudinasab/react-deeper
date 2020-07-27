@@ -1,0 +1,22 @@
+$parent-color: #0d96cc;
+$child-color: #c6538c;
+
+@mixin define-box($name, $title, $color) {
+  .#{$name} {
+    position: relative;
+    border: 1px $color solid;
+    padding: 24px 8px 8px 8px;
+    margin: 8px;
+    &::before {
+      content: $title;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color;
+      padding: 2px 4px;
+    }
+  }
+}
+
+@include define-box("parent", "Parent", $parent-color);
+@include define-box("child", "Child", $child-color);
