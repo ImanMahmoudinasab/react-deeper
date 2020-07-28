@@ -15,12 +15,12 @@ function ParentComponent(props) {
   const [state, setState] = useState();
 
   const onChangeStateClick = function () {
-    setState(Date.now());
+    setState(formatDateTime(Date.now()));
   };
 
   return (
     <div className="parent">
-      <div className="code">{formatDateTime(state)}</div>
+      <div className="code">{state}</div>
       <button onClick={onChangeStateClick}>Change state</button>
       <ChildComponent />
     </div>
@@ -32,11 +32,11 @@ function ChildComponent(props) {
   const [state, setState] = useState();
 
   const onChangeStateClick = function () {
-    setState(Date.now());
+    setState(formatDateTime(Date.now()));
   };
   return (
     <div className="child">
-      <div className="code">{formatDateTime(state)}</div>
+      <div className="code">{state}</div>
       <button onClick={onChangeStateClick}>Change state</button>
     </div>
   );
