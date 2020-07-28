@@ -1,5 +1,6 @@
-$parent-color: #0d96cc;
-$child-color: #c6538c;
+$root-color: #e7130c;
+$parent-color: #ccaf0d;
+$child-color: #73c653;
 
 @mixin define-box($name, $title, $color) {
   .#{$name} {
@@ -18,5 +19,6 @@ $child-color: #c6538c;
   }
 }
 
+@include define-box("root", "Root", $root-color);
 @include define-box("parent", "Parent", $parent-color);
 @include define-box("child", "Child", $child-color);

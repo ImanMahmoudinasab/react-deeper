@@ -6,7 +6,11 @@ import "./styles.css";
 
 function RootComponent() {
   console.count("RootComponent component rendered");
-  return <ParentComponent />;
+  return (
+    <div className="root">
+      <ParentComponent />
+    </div>
+  );
 }
 
 function ParentComponent(props) {
